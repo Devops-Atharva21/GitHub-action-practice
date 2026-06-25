@@ -10,7 +10,8 @@ jobs:
        runs-on: ubuntu-latest
        steps: 
          - name: Checkout Code
-           run : actions/checkout@v4
+           uses : actions/checkout@v4
+         
          - name: Says Hello to user
            run : echo "Hello from Github Actions!"
            
