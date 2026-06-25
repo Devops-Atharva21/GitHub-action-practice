@@ -14,4 +14,16 @@ jobs:
          
          - name: Says Hello to user
            run : echo "Hello from Github Actions!"
+
+         - name: Print branch name
+           run : echo "The branch name is ${{github.ref_name}}"
+
+         - name: Print Current Date
+           run : echo "date"
+
+         - name: Print list of file
+           run : echo "ls"
+
+         - name: Print the current OS
+           run : echo "cat /etc/os-release"
            
