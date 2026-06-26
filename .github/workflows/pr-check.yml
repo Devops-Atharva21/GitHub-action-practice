@@ -8,15 +8,14 @@ on:
       - opened
       - synchronize
 
-
 jobs:
- pr-check:
-    name: Checkout Code
+  pr-check:
+    name: PR Check
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Prints the PR directory
+      - name: Print PR Branch
         run: echo "PR check running for branch: ${{ github.head_ref }}"
