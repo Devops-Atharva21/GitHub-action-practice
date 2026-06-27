@@ -23,5 +23,5 @@ jobs:
 
       - name: show details
         run: |
-          echo "Operating System: ${{ matrix.os }}
+          echo "Operating System: ${{ matrix.os }}"
           python --version  
