@@ -5,7 +5,7 @@ on:
 
 jobs:
   self-server:
-    runs-on: atharva-VirtualBox
+    runs-on: self-hosted
 
     steps:
       - name: Run Command
