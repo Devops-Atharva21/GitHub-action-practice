@@ -5,7 +5,7 @@ on:
 
 jobs:
   self-server:
-    runs-on: self-hosted
+    runs-on: [self-hosted,my-linux-runner]
 
     steps:
       - name: Run Command
@@ -17,3 +17,5 @@ jobs:
           echo "Creating A File"
           touch test-file.txt
           ls 
+          cp -R test-file.txt /home/atharva/Documents
+          ls /home/atharva/Documents
