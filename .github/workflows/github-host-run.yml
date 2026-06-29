@@ -15,6 +15,10 @@ jobs:
           hostname
           echo "Current User"
           whoami
+          docker --version
+          python --version
+          node -v
+          git --version
 
   window-job:
     runs-on: windows-latest
