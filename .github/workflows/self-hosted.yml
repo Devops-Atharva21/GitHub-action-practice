@@ -1,18 +1,19 @@
 name: Self-Hosted
 
 on:
-  workflow_dispatch
+  workflow_dispatch:
 
 jobs:
-  self-hosted:
+  self-server:
     runs-on: atharva-VirtualBox
 
     steps:
-      script: |
-        echo "HostName"
-        hostname 
-        echo "Print Current Working Directory"
-        pwd
-        ehco "Creating A File"
-        touch test-file.txt
-        ls 
+      - name: Run Command
+        run: |
+          echo "HostName"
+          hostname 
+          echo "Print Current Working Directory"
+          pwd
+          echo "Creating A File"
+          touch test-file.txt
+          ls 
