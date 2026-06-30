@@ -21,4 +21,4 @@ jobs:
 
     steps:
       - name: Print Date
-        run: echo "Today's date is ${{ needs.generate-date.outputs.today }}"
+        run: echo "Today's date is ${{ needs.generate-date.outputs.todays }}"
