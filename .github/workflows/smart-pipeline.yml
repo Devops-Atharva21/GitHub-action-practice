@@ -25,7 +25,7 @@ jobs:
         - lint
         - test
 
-      steps"
+      steps:
         - name: Print Branch Type
           run: | 
             if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
