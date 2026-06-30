@@ -37,6 +37,6 @@ jobs:
           fi
 
       - name: Print the commit message
-         run: | 
-           echo "Commit Message:"
-           echo "${{ github.event.head_commit.message }}"
+        run: | 
+          echo "Commit Message:"
+          echo "${{ github.event.head_commit.message }}"
