@@ -1,0 +1,23 @@
+name: Python CI Demo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-python-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout-code@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: Verfiy Python Version
+        run: python --version
+
+      - name: Run Python Script
+        run: python hello.py
