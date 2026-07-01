@@ -7,11 +7,11 @@ jobs:
   secert-demo:
     runs-on: ubuntu-latest
 
-  steps:
-    - name: check if secerts exists
-      run: | 
-        if [ -n "${{ github.secerts.MY_SECERT_MESSAGE }}" ]; then
-          echo "The secert is set: true"
-        else
-          echo "The secert is set: false"
-        fi
+    steps:
+      - name: check if secerts exists
+        run: | 
+          if [ -n "${{ github.secerts.MY_SECERT_MESSAGE }}" ]; then
+            echo "The secert is set: true"
+          else
+            echo "The secert is set: false"
+          fi
