@@ -26,7 +26,6 @@ jobs:
 
     steps:
       - name: Download Report
-        run: |
         uses: actions/download-artifact@v4
         with:
           name: report-file
