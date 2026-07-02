@@ -16,8 +16,8 @@ jobs:
       - name: Login to DockerHub
         uses: docker/login-actions@v3
         with:
-          username: ${{ secert.DOCKER_USERNAME }}
-          password: ${{ secert.DOCKER_TOKEN }}
+          username: ${{ secerts.DOCKER_USERNAME }}
+          password: ${{ secerts.DOCKER_TOKEN }}
 
       - name: Build Docker Image
         run: |
