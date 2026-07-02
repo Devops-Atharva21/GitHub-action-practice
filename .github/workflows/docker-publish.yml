@@ -27,12 +27,12 @@ jobs:
         run: |
           SHORT_SHA=$(echo $GITHUB_SHA | cut -c1-7)
 
-          docker tag my-app:latest YOUR_DOCKER_USERNAME/YOUR_REPOSITORY_NAME:latest
-          docker tag my-app:latest YOUR_DOCKER_USERNAME/YOUR_REPOSITORY_NAME:sha-$SHORT_SHA
+          docker tag my-app:latest dockeratharva29/my-app:latest
+          docker tag my-app:latest dockeratharva29/my-app:sha-$SHORT_SHA
 
       - name: Push Images
         run: |
           SHORT_SHA=$(echo $GITHUB_SHA | cut -c1-7)
 
-          docker push YOUR_DOCKER_USERNAME/YOUR_REPOSITORY_NAME:latest
-          docker push YOUR_DOCKER_USERNAME/YOUR_REPOSITORY_NAME:sha-$SHORT_SHA
+          docker push dockeratharva29/my-app:latest
+          docker push dockeratharva29/my-app:sha-$SHORT_SHA
