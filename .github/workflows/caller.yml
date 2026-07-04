@@ -13,4 +13,4 @@ jobs:
       environment: production
 
     secrets:
-      docker_token: ${{ secerts.DOCKER_TOKEN }}
+      docker_token: ${{ secrets.DOCKER_TOKEN }}
