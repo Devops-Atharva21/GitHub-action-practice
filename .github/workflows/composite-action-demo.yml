@@ -3,7 +3,7 @@ name: Composite Action Demo
 on:
   push:
     branches:
-      - main:
+      - main
 
 jobs:
   demo:
