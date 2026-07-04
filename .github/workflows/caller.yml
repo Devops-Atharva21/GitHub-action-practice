@@ -14,3 +14,12 @@ jobs:
 
     secrets:
       docker_token: ${{ secrets.DOCKER_TOKEN }}
+
+  print-version:
+    runs-on: ubuntu-latest
+    need: build
+
+    steps:
+      - name: Print Build Version
+        run: |
+          echo "Build version: ${{ needs.build.outputs.build_version }}"
