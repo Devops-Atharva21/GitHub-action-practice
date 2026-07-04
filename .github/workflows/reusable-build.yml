@@ -36,8 +36,8 @@ jobs:
           echo "Docker token is set: ${{ secrets.docker_token != '' }}"
 
       - name: Generate Build Version
-        id: Version
+        id: version
         run: |
           VERSION="v1.0-${GITHUB_SHA::7}"
           echo "Generated version $VERSION"
-          echo "build_version=$VERSION" >> "GITHUB_OUTPUT"
+          echo "build_version=$VERSION" >> "$GITHUB_OUTPUT"
