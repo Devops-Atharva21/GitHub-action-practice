@@ -14,10 +14,10 @@ on:
         default: staging
         type: string
 
-      secrets: 
-        docker_token:
-          description: "Docker Hub Token"
-          required: true
+    secrets: 
+      docker_token:
+        description: "Docker Hub Token"
+        required: true
 
 jobs:
   build:
