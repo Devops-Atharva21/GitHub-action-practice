@@ -1,0 +1,36 @@
+name: Reusable Build Workflow
+
+on:
+  workflow_dispatch:
+    input:
+      app_name:
+        description: "Name of the Application"
+        required: true
+        type: string
+
+      environment:
+        description: "Deployment environment"
+        required: true
+        default: staging
+        type: string
+
+      secrets: 
+        docker_token:
+          description: "Docker Hub Token"
+          required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Print Build Information
+        run: |
+          echo "Building ${{ inputs.app_name }} for ${{ inputs.environment }}"
+
+      - name: Verfiy Docker Token
+        run: |
+          echo "Docker token is set: ${{ secrets.docker_token != '' }}"
