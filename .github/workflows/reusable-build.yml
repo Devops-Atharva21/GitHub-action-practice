@@ -18,7 +18,13 @@ on:
       docker_token:
         description: "Docker Hub Token"
         required: true
-
+   
+    outputs:
+      build_version:
+        description: "Generate Build Version"
+        value: ${{ jobs.build.output.build_version }}
+          
+          
 jobs:
   build:
     runs-on: ubuntu-latest
