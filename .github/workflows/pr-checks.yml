@@ -24,9 +24,9 @@ jobs:
 
           LIMIT=1048576
 
-          for file in $FILES do
+          for file in $FILES; do
           if [ -f "$file" ]; then
-            SIZE=$(stat -c%s "@file")
+            SIZE=$(stat -c%s "$file")
             echo "$file : $SIZE bytes"
 
             if [ "$SIZE" -gt "$LIMIT" ]; then
@@ -45,10 +45,10 @@ jobs:
     steps:
       - name: Validate branch name
         run: |
-          BRANCH= "${{ github.head_ref }}"
+          BRANCH="${{ github.head_ref }}"
         echo "Branch Name: $BRANCH"
 
-        if [[ "$BRANCH" =~ ^feature/\.*$ || "$BRANCH" =~ ^fix/\.*$ || "$BRANHC" =~ ^docs/\.*$ ]]; then
+        if [[ "$BRANCH" =~ ^feature/.*$ || "$BRANCH" =~ ^fix/.*$ || "$BRANCH" =~ ^docs/.*$ ]]; then
           echo "✅ Valid branch name."
         else
           echo "❌ Invalid branch name!"
