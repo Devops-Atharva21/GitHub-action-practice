@@ -34,7 +34,7 @@ jobs:
               exit 1
             fi
           fi
-        done
+       done
 
          echo "✅ All files are within the size limit."
 
