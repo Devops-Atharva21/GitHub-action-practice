@@ -7,7 +7,7 @@ on:
       - 'release/**'
     paths-ignore:
       - '*.md'
-      - 'docs/***'
+      - 'docs/**'
 
 jobs:
   ignore-docs-check:
