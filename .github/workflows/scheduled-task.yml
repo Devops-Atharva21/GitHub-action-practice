@@ -1,7 +1,7 @@
 name: Scheduled Tasks
 
 on: 
-  scheduled:
+  schedule:
     # Every Monday at 2:30 AM at UTC
     - cron: '30 2 * * 1'
 
