@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: Display Trigger Information
         run: |
-        echo "✅ Workflow triggered."
-        echo "Branch: {{ github.ref_name }}"
-        echo "Relevant changes detected in src/ or app/."
+          echo "✅ Workflow triggered."
+          echo "Branch: {{ github.ref_name }}"
+          echo "Relevant changes detected in src/ or app/."
         
